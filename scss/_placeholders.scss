@@ -1,0 +1,4 @@
+%container-props {
+    @include width-params ($container-s);
+    margin: 0 auto;
+}

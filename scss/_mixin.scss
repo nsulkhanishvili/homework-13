@@ -1,0 +1,5 @@
+//container size
+@mixin width-params ($max, $width: 100%){
+    max-width: $max;
+    width: $width;
+}

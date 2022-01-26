@@ -1,0 +1,15 @@
+.s-1 .container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.s-1 {
+  padding: 50px 0;
+}
+
+.s-1 .container > h6 {
+  color: #5863F8;
+  padding-bottom: 20px;
+}
+/*# sourceMappingURL=general.css.map */
