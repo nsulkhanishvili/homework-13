@@ -2,3 +2,8 @@
     @include width-params ($container-s);
     margin: 0 auto;
 }
+
+%h6-style{
+        color: $color1;
+        padding-bottom: 20px;
+    }

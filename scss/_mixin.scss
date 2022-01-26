@@ -1,5 +1,12 @@
 //container size
-@mixin width-params ($max, $width: 100%){
+@mixin width-params ($max, $width: 100%) {
     max-width: $max;
     width: $width;
+}
+
+@mixin flex-props($justify: space-between, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
 }

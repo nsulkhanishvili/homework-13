@@ -5,9 +5,61 @@
         @extend %container-props;
 
         &>h6 {
-            color: $color1;
-            padding-bottom: 20px;
+            @extend %h6-style;
         }
 
+        &>h2 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.s-2 {
+    margin: 50px 0;
+
+    .container {
+        @extend %container-props;
+
+        &>h6 {
+            @extend %h6-style;
+        }
+
+        .wrapper-form {
+            @include flex-props;
+
+            &>textarea {
+                max-width: $textarea-w;
+                width: 100%;
+                max-height: $textarea-h;
+                height: 100%;
+                background-color: $textarea-input;
+                margin-right: 15px;
+                border: none;
+                resize: none;
+                color: $color2;
+                font-size: $man-font;
+                padding: 10px;
+            }
+
+            &>.input-wrapper {
+                margin-bottom: 20px;
+
+                &>button,
+                &>input {
+                    max-width: $input-w;
+                    width: 100%;
+                    height: $input-h;
+                    background-color: $textarea-input;
+                    border: none;
+                    margin-bottom: 15px;
+                    color: $color2;
+                    font-size: $man-font;
+
+
+
+
+                }
+            }
+        }
     }
 }
