@@ -1,4 +1,4 @@
-.s-1 .container, .s-2 .container {
+.s-1 .container, .s-2 .container, .s-3 .container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
@@ -9,19 +9,7 @@
   padding-bottom: 20px;
 }
 
-.s-1 {
-  padding: 50px 0;
-}
-
-.s-1 .container > h2 {
-  margin-bottom: 20px;
-}
-
-.s-2 {
-  margin: 50px 0;
-}
-
-.s-2 .container .wrapper-form {
+.s-2 .container .wrapper-form, .s-3 .cards-s3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,11 +25,18 @@
           flex-direction: row;
 }
 
+.s-1, .s-2, .s-3 {
+  margin: 50px 0;
+}
+
+.s-1 .container > h2 {
+  margin-bottom: 20px;
+}
+
 .s-2 .container .wrapper-form > textarea {
   max-width: 720px;
   width: 100%;
-  max-height: 288px;
-  height: 100%;
+  height: 288px;
   background-color: #F8F8F8;
   margin-right: 15px;
   border: none;
@@ -52,7 +47,7 @@
 }
 
 .s-2 .container .wrapper-form > .input-wrapper {
-  margin-bottom: 20px;
+  margin-top: 3px;
 }
 
 .s-2 .container .wrapper-form > .input-wrapper > button,
@@ -65,5 +60,94 @@
   margin-bottom: 15px;
   color: #CECECE;
   font-size: 14px;
+}
+
+.s-2 .container .wrapper-form > .input-wrapper button:hover {
+  background-color: #5863F8;
+  color: wheat;
+}
+
+@media (max-width: 1200xp) {
+  .s-2 {
+    max-width: 1200xp;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .s-2 > .wrapper-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
+.s-3 .cards-s3 .card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: block;
+}
+
+.s-3 .cards-s3 .card > .ball {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #5863F8;
+  margin-bottom: 15px;
+  position: relative;
+  margin-left: 30px;
+  margin: 0 auto;
+}
+
+.s-3 .cards-s3 .card > .ball > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.s-3 .cards-s3 .card > h6 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.s-3 .cards-s3 .card > p {
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+@media (max-width: 1200xp) {
+  .s-3 {
+    max-width: 1200xp;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .s-3 .cards-s3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .s-3 .cards-s3 > .card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 /*# sourceMappingURL=general.css.map */

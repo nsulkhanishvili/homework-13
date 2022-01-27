@@ -1,5 +1,5 @@
 .s-1 {
-    padding: 50px 0;
+    @extend %margin-top50;
 
     .container {
         @extend %container-props;
@@ -15,7 +15,7 @@
 }
 
 .s-2 {
-    margin: 50px 0;
+    @extend %margin-top50;
 
     .container {
         @extend %container-props;
@@ -25,13 +25,12 @@
         }
 
         .wrapper-form {
-            @include flex-props;
+            @extend %flex-props-ph;
 
             &>textarea {
                 max-width: $textarea-w;
                 width: 100%;
-                max-height: $textarea-h;
-                height: 100%;
+                height: $textarea-h;
                 background-color: $textarea-input;
                 margin-right: 15px;
                 border: none;
@@ -42,7 +41,7 @@
             }
 
             &>.input-wrapper {
-                margin-bottom: 20px;
+                margin-top: 3px;
 
                 &>button,
                 &>input {
@@ -54,11 +53,83 @@
                     margin-bottom: 15px;
                     color: $color2;
                     font-size: $man-font;
-
-
-
-
                 }
+
+                button:hover {
+                    background-color: $color1;
+                    color: $color3;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $container-max) {
+        @include width-params($container-max, 90%)
+    }
+
+    @media (max-width: $container-min) {
+        &>.wrapper-form{
+            flex-direction: column;
+            height: auto;
+        }
+
+        }
+    }
+.s-3 {
+    @extend %margin-top50;
+
+    .container {
+        @extend %container-props;
+    }
+
+    .cards-s3 {
+        @extend %flex-props-ph;
+
+        .card {
+            @include boxXY(200px);
+            position: relative;
+            display: block;
+
+            &>.ball {
+                width: $input-h;
+                height: $input-h;
+                border-radius: 50%;
+                background-color: $color1;
+                margin-bottom: 15px;
+                position: relative;
+                margin-left: 30px;
+                margin: 0 auto;
+
+                &>img {
+                    @include perf-centering;
+                }
+            }
+
+            &>h6 {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            &>p {
+                font-size: $man-font;
+                text-align: center;
+                line-height: 20px;
+                letter-spacing: 1px;
+                word-spacing: 3px;
+            }
+        }
+    }
+
+    @media (max-width: $container-max) {
+        @include width-params($container-max, 90%)
+    }
+
+    @media (max-width: $container-min) {
+        .cards-s3 {
+            @include flex-props(center, center, column);
+
+            &>.card:not(:last-child) {
+                margin-bottom: 30px;
             }
         }
     }
